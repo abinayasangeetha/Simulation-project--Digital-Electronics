@@ -1,44 +1,39 @@
-# TITLE
-Minimise the function using K map F(A,B,C)=ABC+B'C'+BC+AB' and simulate the logic diagram using verilog.
+```
+NAME : ABINAYA S
+REG NO: 212222230002
+```
+
+# DESIGN AND SIMULATE THE LOGIC DIAGRAM USING VERILOG NOR GATES
 
 # THEORY
+## NOR GATES
+The NOR gate is a digital logic gate that implements logical NOR - it behaves according to the truth table to the right. A HIGH output (1) results if both the inputs to the gate are LOW (0); if one or both input is HIGH (1), a LOW output (0) results. NOR is the result of the negation of the OR operator. It can also in some senses be seen as the inverse of an AND gate. NOR is a functionally complete operation—NOR gates can be combined to generate any other logical function. It shares this property with the NAND gate. By contrast, the OR operator is monotonic as it can only change LOW to HIGH but not vice versa.
 
-K-Map:
-    
-    The K-map is a systematic way of simplifying Boolean expressions.With the help of the K-map method, we can find the simplest POS and SOP expression, which is known as the minimum expression. The K-map provides a cookbook for simplification.The 3-variable K-map is represented as an array of eight cells. In this case, we used A, B, and C for the variable. We can use any letter for the names of the variables. The binary values of variables A and B are along the left side, and the values of C are across the top. The value of the given cell is the binary values of A and B at left side in the same row combined with the value of C at the top in the same column. For example, the cell in the upper left corner has a binary value of 000, and the cell in the lower right corner has a binary value of 101.
 
-![Simulation-project--Digital-Electronics](simu3.png)
+![image](https://github.com/abinayasangeetha/Simulation-project--Digital-Electronics/assets/119393675/bb540f11-7a1e-4c20-b1dd-6b83d0caa875)
 
-# PROCEDURE
 
-1.Simplify and Minimise the given function.
+# LOGIC DIAGRAM
+![image](https://github.com/abinayasangeetha/Simulation-project--Digital-Electronics/assets/119393675/b81a4dc9-7d7f-41a4-9a0a-80da1cd5ba70)
 
-2.Draw the K-map for the same.
 
-3.Obtain the minimised function.
+```
+F`= XY` + X`Z + YZ`
 
-4.Open the Quartus software and create a new file.
+F= X`Y`Z` + XYZ
 
-5.Feed and run the program .
+F=F``
+```
+# NETLIST DIAGRAM
+![image](https://github.com/abinayasangeetha/Simulation-project--Digital-Electronics/assets/119393675/34895684-20c0-4a39-aed4-8e4e1bdb602d)
 
-6.The RTL viewer and the timing diagram will be displayed.
+
+# TIMING DIAGRAM
+![image](https://github.com/abinayasangeetha/Simulation-project--Digital-Electronics/assets/119393675/92136c24-3e82-4675-868e-76c1456f6446)
+
 
 
 # PROGRAM
+![image](https://github.com/abinayasangeetha/Simulation-project--Digital-Electronics/assets/119393675/59629b1b-4441-4af5-825c-2ab8d18612e8)
 
-```
-module logic(a,b,c,F);
-input a,b,c;
-output F;
-assign F=(((~b&~c)|(a&c))|(b&c));
-endmodule
-```
 
-# RTL VIEWER
-![Simulation-project--Digital-Electronics](simu1.png)
-
-# TIMING DIAGRAM
-![Simulation-project--Digital-Electronics](simu2.png)
-
-# RESULT
-    Thus the program to minimise the function using K map is implemented and executed successfully.
